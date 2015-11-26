@@ -1,2 +1,2 @@
-# angularjs
-#AngularJS
+# AngularJS
+HTML enhanced for web apps!
