@@ -1,5 +1,5 @@
 angular.module('website', ['ngRoute']).
-  config(function($routeProvider, $locationProvider) {
+  config(function($routeProvider) {
     $routeProvider.
       when('/nyheter', {
         templateUrl:'partials/basic-template.html',
@@ -18,7 +18,6 @@ angular.module('website', ['ngRoute']).
         templateUrl:'partials/basic-template.html',
         controller:'HomeController'
       });
-    $locationProvider.html5Mode(true).hashPrefix('!');
   }).
   controller('HeaderController', function($scope) {
     $scope.logopath = 'img/dseklogo.svg';
