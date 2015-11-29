@@ -18,11 +18,7 @@ angular.module('website', ['ngRoute']).
         templateUrl:'partials/basic-template.html',
         controller:'HomeController'
       });
-    // use the HTML5 History API
-    $locationProvider.html5Mode({
-      enabled: true,
-      requireBase: false
-    });
+    $locationProvider.html5Mode(true).hashPrefix('!');
   }).
   controller('HeaderController', function($scope) {
     $scope.logopath = 'img/dseklogo.svg';
