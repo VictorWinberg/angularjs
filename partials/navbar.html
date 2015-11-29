@@ -15,11 +15,11 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="dropdown" ng-repeat="dropdown in dropdowns">
-          <a ng-if="!dropdown.items.length" href="{{dropdown.href}}">{{dropdown.title}}</a>
+          <a ng-if="!dropdown.items.length" href="#/{{dropdown.href}}">{{dropdown.title}}</a>
           <a ng-if="dropdown.items.length" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{dropdown.title}} <span class="caret"></span></a>
           <ul ng-if="dropdown.items.length" class="dropdown-menu">
             <li ng-repeat="item in dropdown.items" class="{{item == '-' ? 'divider' : ''}}">
-              <a href="{{item.href}}">{{item.title}}</a>
+              <a href="#/{{item.href}}">{{item.title}}</a>
             </li>
           </ul>
         </li>

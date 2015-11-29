@@ -24,18 +24,18 @@ angular.module('website', ['ngRoute']).
     $scope.dropdowns =
     [
       {title: 'Aktuellt', items: [
-        {title: 'Nyheter', href: '/nyheter'},
-        {title: 'Kalender', href: '/kalender'},
-        {title: 'Eventanmälan', href: '/eventanmälan'}]},
+        {title: 'Nyheter', href: 'nyheter'},
+        {title: 'Kalender', href: 'kalender'},
+        {title: 'Eventanmälan', href: 'eventanmälan'}]},
       {title: 'Community', items: [
-        {title: 'Anslut', href: '/anslut'}]},
+        {title: 'Anslut', href: 'anslut'}]},
       {title: 'För funktionärer', items: [
-        {title: 'STAB16', href: '/stab16'}]},
+        {title: 'STAB16', href: 'stab16'}]},
       {title: 'Sektionen', items: [
-        {title: 'Om sektionen', href: '/sektionen'},
+        {title: 'Om sektionen', href: 'sektionen'},
         '-',
-        {title: 'Swagtest', href: '/swagtest'}]},
-      {title: 'För företag', href: '/foretag'}
+        {title: 'Swagtest', href: 'swagtest'}]},
+      {title: 'För företag', href: 'foretag'}
     ];
   }).
   controller('HomeController', function ($scope) {
