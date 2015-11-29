@@ -1,0 +1,1097 @@
+/*******************************************************************/
+/*** Generella definitioner ***/
+/*******************************************************************/
+
+body {
+	background				: #282828;
+	background				: #666;
+	color					: #ffffff;
+	font-family				: Verdana, Helvetica, Arial, sans-serif;
+	font-size				: 70%;
+	line-height				: 1.5em;
+	margin					: 0px;
+}
+
+table, div {
+	color					: #000000;
+}
+
+input, textarea, select {
+	font-size    			: 100%;
+	font-family 			: Verdana, Helvetica, Arial, sans-serif;
+}
+
+/* Rent generellt vill vi inte ha kanter runt bilder */
+img {
+	border					: none;
+}
+
+/* De vanligaste blockelementen ska ha ganska mycket luft omkring sig. */
+p, ol, dl, form {
+	margin     				: 0pt 0pt 12pt 0pt;
+}
+
+ul {
+	margin-top				: 6pt;
+}
+
+/* Länkar. */
+a:link, a:visited { /*#900090*/
+	color					: #A96F81;
+	text-decoration 		: none;
+	font-weight				: bold;
+}
+
+a:hover, a:active {
+	color					: #9B133A;
+	text-decoration			: underline;
+}
+
+
+/* Headings. */
+h1, h2, h3, h4, h5, h6 {
+	color          			: #f49ac1;
+	font-weight     		: bold;
+	margin         			: 0pt 0pt 5px 0pt;
+}
+
+h1 {   font-size			: 165%;}
+h2 {   font-size			: 150%;}
+h3 {   font-size			: 135%;}
+h4 {   font-size			: 120%;}
+h5 {   font-size			: 105%;}
+h6 {   font-size			: 90%; }
+
+abbr {
+	border-bottom			: 1px dotted #f49ac1;
+	cursor					: help;
+}
+
+/*******************************************************************/
+/*** Buggfixar ***/
+/*******************************************************************/
+
+/* Fontstorleken är som standard oläsbart liten för de här. Fixa. */
+pre, code, tt	{
+	font-size				: 130%;
+}
+
+/*
+font-size från body ärvs. Detta är kasst i nästlade tabeller. Fixa.
+Återställ till 100%, annars minskar _varje_ nivå till 73% av den förra.
+*/
+table, tr, th, td {
+	font-size				: 100%;
+	line-height				: 150%;
+}
+
+/* dd-och-dt-listor ser konstiga ut om de inte får lite luft. Fixa. */
+dt {
+	padding-top				: 10px;
+}
+
+/* Om man nästlar p i form, får man dubbel indentering. Fixa. */
+form p {
+	margin-left				: 0px;
+}
+
+
+
+/*******************************************************************/
+/*** Huvudkolumnen *	/
+/*******************************************************************/
+
+
+#outer_maintable{
+	-webkit-box-shadow		: 0px 0px 8px RGBA(0,0,0,0.5);
+	-moz-box-shadow			: 0px 0px 8px RGBA(0,0,0,0.5);
+	box-shadow				: 0px 0px 8px RGBA(0,0,0,0.5);
+	border-right			: 1px solid #505050;
+	border-left				: 1px solid #505050;
+	border-top				: 1px solid #505050;
+	margin-left				: auto;
+	margin-right			: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-top-right-radius: 4px;
+	-moz-border-radius-topleft: 4px;
+	-moz-border-radius-topright: 4px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}
+
+/* Det som ligger mellan headern och footern */
+#maintable_wide{
+	/*background-color		: #EBEBEB;*/
+	background-color		: #fff; /** Snyggare //Hannes**/
+}
+
+/* #maintable_wide går ändå ut till höger, #maintable slutar innan området till höger */
+
+#dsekHeaderLogo, #dsekHeaderMenu {
+	display: table-cell;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+#dsekHeaderLogo {
+	padding-bottom: 1em;
+	padding-left: 1em;
+	padding-top: 1em;
+}
+
+#dsekHeaderMenu {
+	text-align: right;
+}
+
+#dsekHeaderMenuInner {
+	display: inline-block;
+}
+
+#dsekmarke_lank {
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+#sektionslogga a{
+text-align: left;
+position: relative;
+top: 1px;
+white-space: nowrap;
+text-decoration: none !important;
+font-family: Verdana, Helvetica, Arial, sans-serif;
+color: white;
+font-weight: bold;
+}
+
+#sektionslogga #sektionslogga_mainText {
+	font-size: 42px;
+	text-shadow: 0px 2px 2px RGBA(0,0,0,0.65);
+	margin: 0px;
+	padding: 0px;
+	line-height: 34px;
+}
+
+#sektionslogga #sektionslogga_subtitle {
+	font-size: 10px;
+	color: #F399C0;
+	margin: 0px 0px 0px 4px;
+	padding: 0px;
+}
+
+#maintable {
+	margin					: 0px;
+	position				: relative;
+	width					: 100%;
+}
+
+#innerMainTable {
+	margin					: 0px;
+	width					: 100%;
+	border-spacing			: 0px 0px;
+	border					: none;
+}
+
+/* Innehållscellen. Den stora i mitten. */
+#contentcell {
+	background				: #ffffff;
+	border					: none;
+	padding					: 15px;
+	vertical-align			: top;
+	/*min-width				: 300px;*/
+}
+
+#contentcell hr {
+	border					: 0px;
+	border-top				: 1px solid #808080;
+	height					: 1px;
+}
+
+#contentcell table {
+	margin 					: 6pt 0pt 12pt 0pt;
+}
+
+/* Extra Kolumnen som visas på tex. index.php */
+
+
+/*******************************************************************/
+/*** Extrakolumnen */
+/*******************************************************************/
+
+
+/* Den (valfria) tredje kolumnen på sidan. */
+#extracell {
+	padding    				: 0px;
+	vertical-align  		: top;
+	background      		: #EBEBEB;
+	background-image		: url('/ikoner/layoutfemton_verticalmenushadow2.gif');
+	background-repeat		: repeat-y;
+	font-size       		: 93%;
+}
+
+#extradata {
+	padding					: 15px;
+	border-bottom			: solid 1px #DDDDDD;
+}
+
+
+/*******************************************************************/
+/*** Sidfot */
+/*******************************************************************/
+
+/* Tabellen i botten av sidan, med sidinformation etcetera. */
+#bottom {
+	margin-top				: 0px;
+	width					: 100%;
+	vertical-align			: bottom;
+	text-align				: center;
+	padding					: 0px;
+	border-top				: solid 1px black;
+	background-image		: url('/ikoner/newimproved/footergrad2.gif');
+	background-repeat		: repeat-x;
+	background-color		: #434343;
+	color					: #e8e8e8;
+}
+
+#bottom a:link, #bottom a:visited {
+	color					: #ffa1cb;
+	font-weight				: normal;
+}
+
+/* Luft ovanför och under informationen. IE tycker inte om att lägga det här direkt under #bottom. */
+#bottom td {
+	padding-bottom  		: 0.5em;
+	padding-top     		: 1em;
+}
+
+/* Ikonerna ska sänkas något och få lite luft gentemot sin text. */
+#bottom img {
+	margin-bottom   		: -4px;
+	margin-right  			: 6pt;
+}
+
+/* Självaste Footern */
+#footerContainer {
+	width					: 100%;
+	/*min-width				: 300px; */
+	height: auto;
+	background-color		: #4E4E4E;
+	text-align				: center;
+	background-repeat		: repeat-x;
+	-webkit-box-shadow: 0 1px 0 #727272 inset, 0 -1px 0 #696969 inset, rgba(0, 0, 0, 0.17) -2px -2px 2px;
+	-moz-box-shadow: 0 1px 0 #727272 inset, 0 -1px 0 #696969 inset, rgba(0, 0, 0, 0.17) -2px -2px 2px;
+	box-shadow: 0 1px 0 #727272 inset, 0 -1px 0 #696969 inset, rgba(0, 0, 0, 0.17) -2px -2px 2px;
+	border-top: 1px solid #474747;
+	border-bottom: 1px solid #363636;
+	line-height: 1.1em;
+	padding-bottom: 4px;
+	background: #575757; /* Old browsers */
+	background: -moz-linear-gradient(top, #575757 0%, #454545 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#575757), color-stop(100%,#454545)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #575757 0%,#454545 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #575757 0%,#454545 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #575757 0%,#454545 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #575757 0%,#454545 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#575757', endColorstr='#454545',GradientType=0 ); /* IE6-9 */
+}
+
+#footerContent {
+	padding-top: 			3px;
+		position: relative;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#footerContent span {
+	margin-left				: 15px;
+	margin-right			: 15px;
+	color					: white;
+	font-weight				: bold;
+	font-size 				: 9px;
+	white-space: nowrap;
+}
+
+#footerContent .leftFooterItem a {
+	color					: #F096BF;
+}
+
+#footerContent .centreFooterItem a {
+	color					: white;
+}
+
+#footerContent .rightFooterItem a {
+	color					: #F096BF;
+}
+
+
+/*******************************************************************/
+/*** Generella klasser ***/
+/*******************************************************************/
+
+
+
+form.twocolinput table td:nth-child(odd) {
+	padding-right			: 1em;
+}
+
+/* Markera obligatoriska fält i formulär */
+.required {
+	font-weight				: bold;
+}
+
+/* Markera felifyllda fält i formulär */
+input.formerror, textarea.formerror {
+	background-color		: #ff6060;
+}
+
+/* För report() */
+.reportSuccess {
+	font-weight				: bold;
+	color					: green;
+}
+
+.reportFailure {
+	font-weight				: bold;
+	color					: maroon;
+}
+
+/* För alert() the properties are additive */
+.alert_1 {
+
+}
+.alert_2 {
+	font-weight				: bold;
+}
+.alert_3 {
+	color					: red;
+}
+.alert_4 {
+	text-decoration			: blink;
+}
+.alert_5 {
+	font-size				: 300%;
+}
+
+/*******************************************************************/
+/* Headern
+/*******************************************************************/
+
+#headerinput, .headerinput {
+	width					: 90px;
+	font-size				: 10px;
+	border					: 1px solid #000000;
+	background				: #e8e8e8;
+
+}
+
+#headersubmit {
+	/*
+	width: 114px;
+	margin-left: 5px;
+	*/
+	width					: 60px;
+	font-size				: 9px;
+	border					: 1px solid #000000;
+}
+
+/*******************************************************************/
+/* Inloggad / logga in */
+/*******************************************************************/
+
+#toptable {
+	background-color		: #434343;
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-top-right-radius: 4px;
+	-moz-border-radius-topleft: 4px;
+	-moz-border-radius-topright: 4px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	width: 100%;
+	display: table;
+	vertical-align: middle;
+}
+
+#toptable .toptableinner{
+	margin-left: auto;
+	margin-right: auto;
+	/*width: 900px;*/
+	display: table;
+	max-width: 900px;
+	width: 100%;
+}
+
+
+/* #usertable = logga in rutan */
+#usertable
+{
+	margin					: 1px;
+	border					: solid 1px #626262;
+	background				: #484848;
+	font-size				: 93%;
+}
+
+#usertable, #usertable table {
+	color					: #e8e8e8;
+}
+
+#usertable a {
+	color					: #c8c8c8;
+	font-weight				: normal;
+}
+
+#usertable .fat, #usertable .fat a {
+	color					: #e8e8e8;
+	font-weight				: bold;
+}
+
+#topicons {
+	display					: inline;
+	margin-right			: 1px /*FF2 hack to prevent logout icon showing on it's own line*/
+}
+
+div#topicons a:hover {
+	text-decoration			: none;
+}
+
+div#topicons a div {
+	display					: none;
+}
+
+div#topicons a:hover div {
+	display					: inline;
+}
+
+
+/*******************************************************************/
+/* BEGIN IE fulhack */
+/*******************************************************************/
+
+div#topicons a:hover {
+	background				: transparent;
+}
+
+div#topicons a div {
+	background-image		: none;
+	background				: transparent;
+	border					: none;
+}
+
+div#topicons a:hover div {
+	background-image		: url('/ikoner/newimproved/descboxtop.gif');
+	background-repeat		: no-repeat;
+}
+div#topicons a:hover div div {
+	background-image		: url('/ikoner/newimproved/descboxloop.gif');
+	background-repeat		: repeat-x;
+	background-color		: #242424;
+	border					: 1px solid #626262;
+	border-top				: none;
+}
+
+/*******************************************************************/
+/* END IE fulhack */
+/*******************************************************************/
+
+.topicons_tip_outer{
+	position				: absolute;
+	margin-top				: 25px;
+	margin-left				: -44px;
+	z-index					: 16387;
+	min-width				: 100px;
+	max-width				: 200px;
+	text-align				: center;
+	color					: #F49AC1;
+	background-image		: url('/ikoner/newimproved/descboxtop.gif');
+	background-repeat		: no-repeat;
+	display					: none; /* FF3 vill ha detta här för att inte borka */
+}
+
+.topicons_tip_inner{
+	float					: left;
+	overflow				: hidden;
+	background-image		: url('/ikoner/newimproved/descboxloop.gif');
+	background-repeat		: repeat-x;
+	background-color		: #242424;
+	border					: 1px solid #626262;
+	border-top				: none;
+	margin-top				: 12px;
+	min-width				: 100px;
+	max-width				: 200px;
+	font-size				: 90%;
+	padding					: 3px 10px 3px 10px;
+	color					: #F49AC1;
+	-webkit-box-shadow		: 2px 2px 2px RGBA(0,0,0,0.2);
+	-moz-box-shadow			: 2px 2px 2px RGBA(0,0,0,0.2);
+	box-shadow				: 2px 2px 2px RGBA(0,0,0,0.2);
+	-webkit-border-bottom-left-radius	: 3px;
+	-webkit-border-bottom-right-radius	: 3px;
+	-moz-border-radius-bottomleft		: 3px;
+	-moz-border-radius-bottomright		: 3px;
+	border-bottom-left-radius			: 3px;
+	border-bottom-right-radius			: 3px;
+}
+
+.topicons_icon{
+	float					: left;
+	margin-left				: 2px;
+	margin-right			: 2px;
+}
+
+/* Texten bredvid ikonerna där det för tillfället står den inloggades namn */
+.topicons_text{
+	height					: 20px;
+	padding					: 3px 10px 0px 10px;
+	margin-right			: 10px;
+	float					: left;
+	font-size				: 90%;
+	border					: solid 1px #626262;
+	color					: white;
+	font-style				: normal;
+	font-weight				: normal;
+	background-color		: #474747;
+	-moz-border-radius		: 2px;
+	-webkit-border-radius	: 2px;
+	border-radius			: 2px;
+}
+
+.topicons_text a{
+	font-weight				: normal;
+}
+
+.topicons_text a:link, .topicons_text a:visited {
+	color					: #ddd /*E8E8E8*/;
+}
+
+
+
+/*******************************************************************/
+/* Navbaren */
+/*******************************************************************/
+
+
+.navbar {
+	width					: 164px !important;
+	background-color		: #EBEBEB;
+}
+
+#maintable .navbar #navbarController {
+	display: none;
+	padding: 15px;
+	font-size: 16px;
+	background: #333;
+	color: #f49ac1;
+	cursor: pointer;
+}
+
+#maintable .navbar #navbarController:hover {
+	text-decoration: underline;
+}
+
+/* Den tabellcell som innehåller navbaren. */
+#navcell {
+	vertical-align			: top;
+	font-size				: 93%;
+	line-height				: 100%;
+	padding					: 7px;
+	padding-top				: 13px;
+}
+
+/* Alla ul-listor i navbaren ska ha samma padding, inte visa några bullets, och inte ha några marginaler. */
+#navcell ul {
+   padding         			: 0px;
+   list-style-type 			: none;
+   margin          			: 0px;
+
+}
+
+/* Eftersom padding ärvs, måste vi nollställa den på andra nivå. Marginalen sätts för att få lagom indrag. */
+#navcell ul ul {
+   padding        			: 0px;
+   margin-left     			: 12px;
+}
+
+/* Skapa lite luft mellan alla listitems. */
+#navcell li {
+
+   margin-top				: 3px;
+   margin-bottom			: 3px;
+
+}
+
+#navcell hr {
+	border					: 0px;
+	border-top				: 1px solid #808080;
+	height					: 1px;
+}
+
+#navcell a {
+	color					: #000000;
+	text-decoration			: none;
+	font-weight				: normal;
+}
+
+#navcell a.selected {
+	font-weight				: bold;
+}
+
+#navcell a:hover {
+	text-decoration			: underline;
+}
+
+#navcell h1 a {
+	color           		: #f49ac1;
+	font-weight    	 		: bold;
+	line-height				: 1em;
+}
+
+#navcell h1 a:hover {
+	text-decoration			: none;
+	color					: #000000;
+}
+
+#navcell .navBarProject {
+	width					: 125px;
+	-webkit-border-radius	: 3px;
+	-moz-border-radius		: 3px;
+	border-radius			: 3px;
+	margin-left				: auto;
+	margin-right			: auto;
+	margin-top				: 12px;
+	padding					: 0px;
+	overflow				: hidden;
+	background				: white;
+	-webkit-box-shadow		: -1px 1px 3px RGBA(0,0,0,0.30);
+	-moz-box-shadow			: -1px 1px 3px RGBA(0,0,0,0.30);
+	box-shadow				: -1px 1px 3px RGBA(0,0,0,0.30);
+	text-align				: center;
+}
+
+#navcell .navBarProject img {
+	-webkit-border-radius	: 3px;
+	-moz-border-radius		: 3px;
+	border-radius			: 3px;
+	max-width				: 100%;
+}
+
+#navcell a:hover .navBarProject {
+	border-color			: #f785b3;
+}
+
+
+/* Infolådan som kommer upp när man hovrar över ett projekt */
+.navBarProject:hover .navBarProjectInfoBoxArrow {
+	display					: block;
+}
+
+.navBarProjectInfoBoxArrow{
+	background				: url(/ikoner/infoboxarrowleft.gif) no-repeat 0px 1px;
+	margin-left				: 130px;
+	margin-top				: 5px;
+	position				: absolute;
+	z-index					: 16387;
+	display: none;
+	max-width				: 300px;
+}
+
+.navBarProjectInfoBox {
+	background				: url(/ikoner/newimproved/descboxloop.gif);
+	color					: #FF9ECB !important;
+	font-weight				: bold;
+	line-height				: 15px;
+	margin-left				: 12px;
+	padding-left			: 15px;
+	padding-right			: 15px;
+	padding-top				: 6px;
+	padding-bottom			: 6px;
+	border					: 1px solid #626262;
+	border-left				: none;
+	-webkit-box-shadow		: 2px 2px 2px RGBA(0,0,0,0.2);
+	-moz-box-shadow			: 2px 2px 2px RGBA(0,0,0,0.2);
+	box-shadow				: 2px 2px 2px RGBA(0,0,0,0.2);
+	-webkit-border-bottom-right-radius	: 3px;
+	-webkit-border-top-right-radius		: 3px;
+	-moz-border-radius-bottomright		: 3px;
+	-moz-border-radius-topright			: 3px;
+	border-bottom-right-radius			: 3px;
+	border-top-right-radius				: 3px;
+}
+
+/* Infolådan som kommer upp när man hovrar över ett kalender-event i PageExtra */
+
+
+.pageExtraCalEntry:hover .pageExtraCalInfoBoxArrow {
+	display					: block;
+}
+
+.pageExtraCalInfoBoxArrow{
+	background				: url(/ikoner/infoboxarrowright.gif) no-repeat 238px 1px;
+	margin-left				: -260px;
+	margin-top				: 5px;
+	position				: absolute;
+	z-index					: 16387;
+	display					: none;
+	width					: 250px;
+}
+
+.pageExtraCalInfoBox {
+	background				: url(/ikoner/newimproved/descboxloop.gif);
+	background-repeat		: repeat-x;
+	background-color		: #292929;
+	color					: #FF9ECB;
+	font-weight				: bold;
+	margin-right			: 12px;
+	padding-left			: 15px;
+	padding-right			: 15px;
+	padding-top				: 6px;
+	padding-bottom			: 6px;
+	border					: 1px solid #626262;
+	border-right			: none;
+	-webkit-box-shadow		: -2px 2px 2px RGBA(0,0,0,0.2);
+	-moz-box-shadow			: -2px 2px 2px RGBA(0,0,0,0.2);
+	box-shadow				: -2px 2px 2px RGBA(0,0,0,0.2);
+	-webkit-border-bottom-left-radius	: 3px;
+	-webkit-border-top-left-radius		: 3px;
+	-moz-border-radius-bottomleft		: 3px;
+	-moz-border-radius-topleft			: 3px;
+	border-bottom-left-radius			: 3px;
+	border-top-left-radius				: 3px;
+}
+
+
+/* Kalndern i pageExtra */
+
+.pageExtraCalDate {
+	width: 32px;
+	height: 32px;
+	background: #FF9ECB;
+	color: black;
+	font-size: 9px;
+	border: 1px solid #DD80CB;
+	text-align: center;
+	vertical-align: middle;
+	float: left;
+	margin-right: 6px;
+	-webkit-box-shadow		: 0px 1px 4px RGBA(0,0,0,0.4);
+	-moz-box-shadow			: 0px 1px 4px RGBA(0,0,0,0.4);
+	box-shadow				: 0px 1px 4px RGBA(0,0,0,0.4);
+	-webkit-border-radius	: 3px;
+	-moz-border-radius		: 3px;
+	-moz-border-radius-topleft	: 3px;
+	border-radius			: 3px;
+}
+
+.pageExtraCalDateNr{
+	font-weight: normal;
+	font-size: 13px;
+}
+
+.pageExtraCalDate a{
+	text-decoration: none;
+	color: black;
+	font-weight: normal;
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding: 5px;
+	padding-left: 0px;
+	padding-right: 0px;
+	line-height: 12px;
+}
+
+
+
+/* Mellanrum mellan navbaren och innehållet, samt (eventuellt) innehållet och extracellen. */
+#spacer {
+	width          			: 1px;
+	background				: #ebebeb;
+}
+
+#navcell h1 {
+	margin					: 0 0 10px 0;
+}
+
+/*******************************************************************/
+/* Bloggsystemet */
+/*******************************************************************/
+
+blockquote {
+   margin-left   	  		: 2em;
+   padding        			: 4px 0px 4px 4px;
+   border          			: 1px solid black;
+   font-family     			: courier new, courier, monospace;
+}
+
+cite {
+   font-family     			: courier new, courier, monospace;
+}
+
+q {
+   font-family     			: courier new, courier, monospace;
+}
+
+/*******************************************************************/
+/* Fancy box */
+/*******************************************************************/
+
+.fancybox {
+	border-left				: 1px solid #CCCCCC;
+	border-right			: 1px solid #CCCCCC;
+	border-bottom			: 1px solid #CCCCCC;
+	border-top				: 1px solid #F096C0; /* #f49ac1*/
+	padding-left			: 15px;
+	padding-right			: 15px;
+	padding-top				: 15px;
+	margin-bottom			: 15px;
+	background-image		: url('/ikoner/layoutfemton_fancyparagraph_background.gif');
+	background-repeat		: repeat-x;
+	-webkit-border-radius	: 3px;
+	-moz-border-radius		: 3px;
+	border-radius			: 3px;
+	-webkit-box-shadow		: rgba(0, 0, 0, 0.10) 2px 2px 4px;
+	-moz-box-shadow			: rgba(0, 0, 0, 0.10) 2px 2px 4px;
+	box-shadow				: rgba(0, 0, 0, 0.10) 2px 2px 4px;
+}
+
+/*******************************************************************/
+/* Fancy paragraph */
+/*******************************************************************/
+
+.fancyparagraph {
+	border					: 1px solid #AAA;
+	border-top				: 1px solid #F096C0; /* #f49ac1*/
+	padding-left			: 10px;
+	padding-right			: 10px;
+	padding-top				: 5px;
+	margin-bottom			: 10px;
+	background: #fafafa;
+	background-repeat		: repeat-x;
+	-webkit-border-radius	: 3px;
+	-moz-border-radius		: 3px;
+	border-radius			: 3px;
+	box-shadow				: 0px 0px 2px RGBA(0,0,0,0.25);
+}
+
+.fancyparagraph p {
+	margin       	   		: 0pt 0pt 10pt 0pt;
+ }
+
+.fancyparagraph h3, .fancyparagraph h4 {
+	text-shadow				: 0px 1px 0px white;
+	color					: #000000;
+	margin     		    	: 0pt 0pt 0pt 0pt;
+}
+
+.fancyparagraph hr {
+ 	border					: 0px;
+ 	border-top				: 1px dotted #dddddd!important;
+ 	height					: 1px;
+}
+
+.fancyparagraph .fancyparagraphbody {
+	padding-bottom			: 5px;
+	padding-top: 10px;
+}
+
+
+.fancyparagraph .fancyparagraphextrabottom {
+	font-size      			: 0.8em;
+	display: block;
+}
+
+ .fancyparagraphextratop {
+	font-size       		: 0.8em;
+	float: right;
+}
+
+ .fancyParagraphHeader {
+	font-family: Helvetica;
+	font-weight: bold;
+	/*padding-left			: 15px;*/
+	text-shadow				: 0px 1px 0px white;
+	font-size				: 1.3em;
+}
+
+.fancyParagraphImage {
+	float: right;
+	margin: 10px 0px 15px 15px;
+	overflow: hidden;
+	text-align: center;
+	background: white;
+	border: 3px solid white;
+	-webkit-box-shadow: 0px 0px 5px RGBA(0,0,0,0.45);
+	-moz-box-shadow: 0px 0px 5px RGBA(0,0,0,0.45);
+	box-shadow: 0px 0px 2px RGBA(0,0,0,0.45);
+}
+
+.fancyParagraphImage img {
+	max-width: 100px;
+	max-height: 150px;
+}
+
+/*******************************************************************/
+/* QuickSearch-saker */
+/*******************************************************************/
+
+#quicksearch-window {
+	width					: auto;
+	color					: white;
+	background				: #434343;
+	position				: absolute;
+	visibility				: hidden;
+	-webkit-transition: opacity .2s ease-out;
+	margin-left				: -150px;
+	left					: 50%;
+	top						: 150px;
+	padding					: 10px;
+	z-index					: 22;
+	-moz-border-radius		: 4px;
+	-webkit-border-radius	: 4px;
+	border-radius			: 4px;
+	-webkit-box-shadow		: 0px 0px 8px RGBA(0,0,0,0.5);
+	-moz-box-shadow			: 0px 0px 8px RGBA(0,0,0,0.5);
+	box-shadow				: 0px 0px 8px RGBA(0,0,0,0.5);
+}
+
+#quicksearch-window span#quicksearch-title {
+	color					: white;
+	font-size				: 135%;
+	font-weight				: bold;
+}
+
+#quicksearch-window a.quicksearch-close {
+	position				: absolute;
+	top						: 5px;
+	right					: 5px;
+	color					: black;
+	background-color		: #cccccc;
+	border					: 1px outset black;
+	padding-left			: 2px;
+	padding-right			: 2px;
+}
+
+a#quicksearch-advlink:link, a#quicksearch-advlink:visited {
+	color					: #FFFFFF;
+}
+
+a#quicksearch-advlink:hover, a#quicksearch-advlink:active {
+	color					: #CCCCCC;
+}
+
+/*******************************************************************/
+/* Vännersidan */
+/*******************************************************************/
+
+.attentionBox {
+	border-color			: #d6769f;
+	border-style			: solid;
+	border-width			: 1px;
+	-moz-border-radius		: 4px;
+	-webkit-border-radius	: 4px;
+	border-radius			: 4px;
+	padding					: 10px;
+	margin-top				: 10px;
+	margin-bottom			: 20px;
+}
+
+
+/*******************************************************************/
+/* AJAX-loader */
+/*******************************************************************/
+
+.ajaxLoader {
+	width					: 100px;
+	margin					: auto;
+	text-align				: center;
+	overflow				: hidden;
+	font-size				: 100%;
+}
+.ajaxLoader img {
+	margin					: auto;
+}
+
+
+/*******************************************************************/
+/* Trevligheter */
+/*******************************************************************/
+
+.underline {
+	height					: 1px;
+	width					: auto;
+	background-color		: black;
+	border					: none;
+	margin-bottom			: 1em;
+}
+
+/*******************************************************************/
+/* Media Queries */
+/* Here be äcklig Perry-fulfix */
+/* Någon borde kasta ut table-layouten med ansiktet före, nyss! */
+/*******************************************************************/
+
+@media (max-width: 890px){
+	.topicons_text {
+		text-align: center;
+		float: none;
+		margin-bottom: .5em;
+	}
+
+}
+
+@media (max-width: 700px) {
+	.dsekmenu {
+		font-size: 8px;
+	}
+
+	#maintable, #maintable > tbody, #maintable > tbody > tr,
+	#dsekContentCell
+	{
+		display: block;
+	}
+
+	#maintable .navbar {
+		display: block;
+		width: 100% !important;
+		background-image: none !important;
+		background: #ebebeb;
+		text-align: center;
+	}
+
+	#maintable .navbar #navbarInner {
+		display: none;
+	}
+
+	#maintable .navbar #navbarController {
+		display: block;
+	}
+
+	#extracell {
+		display: block;
+		background-image: none;
+	}
+
+	#extracell #extra_column {
+		margin: auto !important;
+	}
+
+}
+
+@media (max-width: 610px) {
+
+
+	#toptable, #dsekHeaderLogo, #dsekHeaderMenu {
+		display: block;
+		text-align: center;
+	}
+	#dsekHeaderMenu {
+		padding-bottom: 1em;
+		padding-left: 1em;
+	}
+
+	#dsekHeaderLogo {
+		-webkit-transform: scale(0.8);
+		-moz-transform: scale(0.8);
+		transform: scale(0.8);
+	}
+
+}

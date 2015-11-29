@@ -1,0 +1,27 @@
+/*******************************************************************/
+/*** Generella definitioner ***/
+/*******************************************************************/
+
+body {
+	background				: #282828;
+	background				: #666;
+	color					: #ffffff;
+	font-family				: Verdana, Helvetica, Arial, sans-serif;
+}
+
+/* Länkar. */
+a:link, a:visited { /*#900090*/
+	color					: #A96F81;
+	text-decoration 		: none;
+	font-weight				: bold;
+}
+
+a:hover, a:active {
+	color					: #9B133A;
+	text-decoration			: underline;
+}
+
+/* Headings. */
+h1, h2, h3, h4, h5, h6 {
+	color          			: #f49ac1;
+}
