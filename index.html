@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AngularJS Website</title>
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 </head>
 
 <body>
@@ -13,18 +13,27 @@
     <!-- Top -->
     <header>
       <div ng-controller="HeaderController">
-        <div ng-include="'partials/header.html'"></div>
-        <div ng-include="'partials/navbar.html'"></div>
+        <div ng-include="'app/shared/header/header.html'"></div>
+        <div ng-include="'app/shared/header/navbar.html'"></div>
       </div>
     </header>
-
+    <p><a href="https://github.com/angular-app/angular-app">https://github.com/angular-app/angular-app</a> <br>
+      <a href="https://github.com/sahat/satellizer">https://github.com/sahat/satellizer</a> <br>
+      <a href="https://github.com/mgcrea/angular-strap">https://github.com/mgcrea/angular-strap</a> <br>
+      <a href="https://github.com/mgechev/angularjs-style-guide">https://github.com/mgechev/angularjs-style-guide</a>
+    </p>
     <div ng-view></div>
   </div>
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/angular.min.js"></script>
-  <script src="js/angular-route.min.js"></script>
-  <script src="js/app.js"></script>
+
+  <script src="assets/libs/jquery.min.js"></script>
+  <script src="assets/libs/bootstrap.min.js"></script>
+  <script src="assets/libs/angular.min.js"></script>
+  <script src="assets/libs/angular-route.min.js"></script>
+  <script src="app/app.js"></script>
+  <script src="app/routes.js"></script>
+  <script src="app/shared/header/header.js"></script>
+  <script src="app/components/home/home.js"></script>
+
 </body>
 
 </html>
